@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SSLインスペクション デモページ</title>
+</head>
+<body>
+<h1>⚠ SSLインスペクション デモページ ⚠</h1>
+<p>無害ですが「怪しいサイト」風の構造を持っています。</p>
+
+<!-- 疑似マルウェアダウンロード -->
+<a href="fake-malware.exe" download>怪しいファイルをダウンロード</a>
+
+<!-- 難読化JavaScript -->
+<script>
+var code = "YWxlcnQoJ1Rlc3QgRGVtb18gSlMgZm9yIFNTSCBUZXN0Jyk=";
+eval(atob(code));
+</script>
+
+<!-- 疑似フィッシングフォーム -->
+<form action="#" method="post">
+<h3>銀行ログイン</h3>
+<label>ユーザーID: <input type="text" name="uid"></label><br>
+<label>パスワード: <input type="password" name="pwd"></label><br>
+<button type="submit">ログイン</button>
+</form>
+</body>
+</html>
