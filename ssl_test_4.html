@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SSL Test 4</title>
+</head>
+<body>
+<h1>最強テストページ</h1>
+<p>Base64 JS + ダミーリンク + iframe + リダイレクト + 異常HTML</p>
+
+<script>
+  var code = 'YWxlcnQoIk1heGltdW0gcmVhY3Rpb24gdGVzdCIp';
+  eval(atob(code));
+</script>
+
+<p>ダウンロードリンク（無害）:
+  <a href="dummy-setup.msi">setup.msi</a>
+</p>
+
+<iframe src="about:blank" width="0" height="0"></iframe>
+<script>
+  window.location.href = "about:blank";
+</script>
+
+<div><div><div>Nested content for inspection</div></div></div>
+</body>
+</html>

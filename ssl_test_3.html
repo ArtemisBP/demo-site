@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SSL Test 3</title>
+</head>
+<body>
+<h1>JS動的生成 + 異常HTML</h1>
+<script>
+  // JSでリンクを動的生成
+  var link = document.createElement('a');
+  link.href = 'dummy-invoice.docx';
+  link.innerText = 'invoice.docx';
+  document.body.appendChild(link);
+</script>
+<div><div><div>Nested content</div></div></div>
+</body>
+</html>
